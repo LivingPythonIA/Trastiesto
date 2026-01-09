@@ -1,0 +1,70 @@
+.product-item {
+  border: 1px solid #ddd;
+  width: 100%;
+  max-width: 350px;
+  margin: auto;
+
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 1rem;
+
+  color: #2f2f2f; /* TEXTO LEGIBLE */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+.product-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+.product-item a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* TEXTO */
+.product-item p {
+  margin: 0.375rem 0;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* TÍTULO */
+.product-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2f2f2f; /* oscuro y legible */
+  margin-top: 0.5rem;
+}
+
+/* PRECIO (si usás clase) */
+.product-price {
+  color: #7c8c6f; /* verde Trastiesto */
+  font-weight: 600;
+}
+
+/* ACCIONES */
+.product-actions {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .product-item {
+    max-width: 95%;
+    margin-bottom: 1.5rem;
+  }
+}

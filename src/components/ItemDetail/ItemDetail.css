@@ -1,0 +1,30 @@
+.container-detail{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px auto;
+    gap: 40px;
+    max-width: 900px;
+ }
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .container-detail {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 1rem;
+  }
+
+  .container-detail img {
+    width: 100%;
+  }
+}
+
+.availability-note {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  color: #777;
+  font-style: italic;
+}
+

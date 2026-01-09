@@ -1,0 +1,71 @@
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+}
+
+/* LISTA */
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* LINKS */
+.nav-list a {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #2f2f2f;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav-list a:hover {
+  color: #7c8c6f; /* verde Trastiesto */
+}
+
+/* CARRITO */
+.nav-cart {
+  position: relative;
+}
+
+.icons-cart {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px; /* área táctil */
+}
+
+/* BADGE */
+.in-cart {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+
+  background-color: #7c8c6f;
+  color: white;
+
+  width: 18px;
+  height: 18px;
+
+  border-radius: 50%;
+  font-size: 0.7rem;
+  font-weight: 600;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .nav-list {
+    gap: 0.8rem;
+  }
+}

@@ -1,0 +1,92 @@
+.item-list-container h2 {
+  width: 100%;
+  text-align: center;
+  margin: 2rem;
+}
+
+.carrito-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* CONTENEDOR DE BOTONES */
+.btn-container {
+  width: 100%;
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+/* TOTAL */
+.total-pagar {
+  width: 100%;
+  text-align: center;
+}
+
+.total-pagar small {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.75rem;
+  color: #777;
+}
+
+/* CARRITO VACÍO */
+.msg-cart-vacio {
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+/* VOLVER */
+.btn-volver {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.3rem;
+}
+
+/* ============================= */
+/* BOTÓN WHATSAPP */
+/* ============================= */
+
+.btn-whatsapp {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+
+  background-color: #25d366;
+  color: white;
+  padding: 0.9rem 1.2rem;
+  border-radius: 10px;
+
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+
+  transition: background-color 0.2s ease;
+}
+
+.btn-whatsapp:hover {
+  background-color: #1ebe5d;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .btn-container {
+    gap: 1rem;
+  }
+
+  .msg-cart-vacio {
+    font-size: 1.2rem;
+  }
+}
+.reserva-aviso {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.75rem;
+  color: #888;
+  font-style: italic;
+}

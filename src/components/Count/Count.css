@@ -1,0 +1,61 @@
+.count-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.count-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.count-label {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.count-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.count-value {
+  min-width: 24px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* BOTÓN PRINCIPAL */
+.btn-add {
+  background-color: #7c8c6f; /* verde Trastiesto */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.btn-add:hover {
+  background-color: #67765c;
+}
+
+/* TEXTO DE AYUDA */
+.count-help {
+  font-size: 0.75rem;
+  color: #777;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .count-controls {
+    justify-content: center;
+  }
+
+  .btn-add {
+    width: 100%;
+  }
+}

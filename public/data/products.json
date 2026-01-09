@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "name": "Budín de limón premium",
+    "price": 4500,
+    "category": "dulce",
+    "description": "Elaborado con jugo y ralladura de limones frescos, este **budín extra húmedo** se termina con un **glaseado de limón casero** y espolvoreado con un toque de ralladura.",
+    "imageUrl": "/images/budin-limon.jpg"
+  },
+  {
+    "id": "2",
+    "name": "Pan rústico de masa madre",
+    "price": 3200,
+    "category": "salado",
+    "description": "**Hogaza artesanal de 750 g** con corteza crujiente y miga aireada. Fermentación **lenta y natural de 24 horas** que garantiza un sabor inigualable.",
+    "imageUrl": "/images/pan-masa-madre.jpg"
+  },
+  {
+    "id": "3",
+    "name": "Croissant de manteca francesa",
+    "category": "dulce",
+    "price": 1200,
+    "description": "**Clásico francés de hojaldre 100% manteca**. Crujiente por fuera, tierno y aireado por dentro, con un delicado aroma lácteo.",
+    "imageUrl": "/images/croissant.jpg"
+  },
+  {
+  "id": "4",
+  "name": "Tarta de manzana y canela",
+  "price": 5800,
+  "category": "dulce",
+  "description": "Base de masa quebrada, relleno cremoso de manzana y un toque de canela espolvoreada.",
+  "imageUrl": "/images/tarta-manzana.jpg"
+},
+{
+  "id": "5",
+  "name": "Focaccia de romero y sal marina",
+  "price": 3800,
+  "category": "salado",
+  "description": "Pan chato italiano de textura esponjosa, con aceite de oliva, romero fresco y sal marina gruesa.",
+  "imageUrl": "/images/focaccia-romero.jpg"
+}
+]
