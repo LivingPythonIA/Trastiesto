@@ -7,9 +7,14 @@ export const Header = () => {
     <header className="header">
       <div className="header-container">
         <Link to="/" className="logo">
-          <span role="img" aria-label="bolsa de compras">🛍️</span>
+          <img
+            src="/logo-trastiesto.png"
+            alt="Trastiesto"
+            className="logo-img"
+          />
           <span className="logo-text">Trastiesto</span>
         </Link>
+
         <Nav />
       </div>
     </header>
