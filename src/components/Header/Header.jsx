@@ -6,13 +6,12 @@ export const Header = () => {
   return (
     <header className="header">
       <div className="header-container">
-        <Link to="/" className="logo">
+        <Link to="/" className="logo" aria-label="Ir al inicio">
           <img
             src="/logo-trastiesto.png"
             alt="Trastiesto"
             className="logo-img"
           />
-          <span className="logo-text">Trastiesto</span>
         </Link>
 
         <Nav />
