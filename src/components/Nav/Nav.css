@@ -11,7 +11,7 @@
 .nav-list {
   list-style: none;
   display: flex;
-  gap: 1.2rem;
+  gap: 1.4rem;
   align-items: center;
   margin: 0;
   padding: 0;
@@ -45,12 +45,13 @@
 /* BADGE */
 .in-cart {
   position: absolute;
-  top: -6px;
-  right: -10px;
-
+  top: -5px;
+  right: -8px;
   background-color: #7c8c6f;
   color: white;
-
+  min-width: 18px;
+  height: 18px;
+  border-radius: 50%;
   width: 18px;
   height: 18px;
 

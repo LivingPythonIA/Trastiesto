@@ -30,8 +30,8 @@ nav a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f7f4ef; /* tono cálido */
-  border-bottom: 1px solid #ddd;
+  background-color: #faf9f6;
+  border-bottom: 1px solid #e2e2e2;
   padding: 0.8rem 0;
    justify-content: space-between;
 }
@@ -52,11 +52,12 @@ nav a:hover {
 .header-container {
   max-width: 1200px;
   margin: auto;
-  padding: 0 1rem;
+  padding: 1rem 1rem;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 2rem; /* 🔑 separación */
 }
 
 /* LOGO */
@@ -67,8 +68,6 @@ nav a:hover {
   display: flex;
   align-items: center;
   gap: 0.4rem;
-
-
   text-decoration: none;
   font-size: 1.6rem;
   font-weight: 700;

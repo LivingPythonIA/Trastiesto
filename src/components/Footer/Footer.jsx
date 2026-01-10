@@ -12,7 +12,7 @@ export const Footer = () => {
           </p>
 
           <p className="footer-contact">
-            📍 Buenos Aires · 📦 Envíos a coordinar
+            📍 Buenos Aires, Morón · 📦 Envíos a coordinar
           </p>
 
           <p className="footer-contact">
