@@ -6,7 +6,7 @@ import "./Cart.css";
 export const Cart = () => {
   const { cart, clearCart, deleteItem, total } = useCartContext();
 
-  // 👉 CAMBIÁ ESTE NÚMERO POR EL TUYO
+  // 👉 ESTE ES MI NÚMERO
   const phoneNumber = "5491162239296";
 
   const buildWhatsAppMessage = () => {
@@ -15,7 +15,7 @@ export const Cart = () => {
     message += "Me interesan los siguientes productos:%0A%0A";
 
     cart.forEach((prod) => {
-      message += `• ${prod.name} (x${prod.quantity}) - $${prod.price}%0A`;
+      message += `• ${prod.name} - $${prod.price}%0A`;
     });
 
     message += `%0ATotal estimado: $${total().toLocaleString("es-AR")}`;
@@ -34,7 +34,6 @@ export const Cart = () => {
         {cart.length ? (
           cart.map((prod) => (
             <Item key={prod.id} {...prod}>
-              <p>Cantidad: {prod.quantity}</p>
               <button
                 className="btn"
                 onClick={() => deleteItem(prod.id)}
@@ -55,7 +54,9 @@ export const Cart = () => {
           <div className="total-pagar">
             <p>Total estimado: ${total().toLocaleString("es-AR")}</p>
             <small>Los precios se confirman por mensaje</small>
-            <small className="reserva-aviso">Reservas por mensaje</small>
+            <small className="reserva-aviso">
+              Reservas y coordinación por WhatsApp
+            </small>
           </div>
 
           <a

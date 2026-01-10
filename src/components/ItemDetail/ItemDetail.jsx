@@ -6,9 +6,12 @@ import './ItemDetail.css'
 export const ItemDetail = ({detail}) => {
   const {addItem} = useCartContext()
 
-  const handleAdd = (quantity) => {
+/*   const handleAdd = (quantity) => {
     addItem({...detail, quantity})
-  }
+  } */
+const handleAdd = () => {
+  addItem(detail);
+};
 
   return (
     <div className="container-detail">

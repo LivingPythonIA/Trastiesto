@@ -46,7 +46,7 @@ export const ProductFormUI = ({
         value={product.category}
         onChange={onChange}
         placeholder=""
-        // cambiar repuestos  
+        // cambiar   
         required />
         {errors.category && <p className="error">{errors.category}</p>}
       </div>
@@ -61,7 +61,7 @@ export const ProductFormUI = ({
         required />
         {errors.description && <p className="error">{errors.description}</p>}
       </div>
-      {/* // cambiar repuestos  */}
+      {/* // cambiar   */}
       <div>
         <label htmlFor="info">Info:</label>
         <textarea 

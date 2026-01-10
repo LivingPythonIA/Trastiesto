@@ -1,91 +1,49 @@
 import { useState } from "react";
 import { CartContext } from "./CartContext";
 
-export const CartProvider = ({children}) => {
-  const[cart, setCart]= useState([])
-  
-  /* ----------------------------------------------------------- */
-  /*            funcion que chekea si existe el producto         */
-  /* ----------------------------------------------------------- */
-  const exists = (id) => {
-    const exist = cart.some((p) => p.id === id);
-    return exist
-  }
-  
-  /* ----------------------------------------------------------- */
-  /*            funcion que agrega productos al carritoo         */
-  /* ----------------------------------------------------------- */
+export const CartProvider = ({ children }) => {
+  const [cart, setCart] = useState([]);
+
+  // Verificar si el producto ya está en la lista
+  const exists = (id) => cart.some((p) => p.id === id);
+
+  // Agregar producto único
   const addItem = (item) => {
     if (exists(item.id)) {
-      // map, cuido mutacion a nivel array
-      const updatedCart = cart.map((prod) => {
-        if (prod.id === item.id) {
-          //cuido mutacion a nivel de objeto
-          return {...prod, quantity: prod.quantity + item.quantity}
-        }else {
-          return prod
-        } 
-      })
-      setCart(updatedCart)
-      alert('Agregando al carrito')
-    } else{
-      setCart([...cart,item]);
-      alert(`${item.name} Agregando al carrito`)
+      alert("Este producto ya está en tu lista de interés");
+      return;
     }
-  }
-  
-  /* ----------------------------------------------------------- */
-  /*                 Eliminar producto con filter                */
-  /* ----------------------------------------------------------- */
+
+    setCart((prev) => [...prev, item]);
+  };
+
+  // Eliminar producto
   const deleteItem = (id) => {
-    const filtered = cart.filter((p)=> p.id !== id)
-    setCart(filtered)
-    alert("Producto eliminado")
-  }
+    setCart((prev) => prev.filter((p) => p.id !== id));
+  };
 
-  /* ----------------------------------------------------------- */
-  /*                       Vaciar carrito                        */
-  /* ----------------------------------------------------------- */
-  const clearCart = () => setCart([]) 
+  // Vaciar lista
+  const clearCart = () => setCart([]);
 
-  /* ----------------------------------------------------------- */
-  /*        Calcular total de items en el carrito                */
-  /* ----------------------------------------------------------- */
-  const getTotalItems = ()=> {
-    const totalItems = cart.reduce((acc, p) => acc + p.quantity,0)
-    return totalItems
-  }
+  // Cantidad total de productos
+  const getTotalItems = () => cart.length;
 
-  /* ----------------------------------------------------------- */
-  /*                       Calcular precio total                 */
-  /* ----------------------------------------------------------- */
-  const total = ()=> {
-    const total = cart.reduce((acc, p) => acc + p.price * p.quantity,0)
-    return Math.round(total *100) / 100
-  }
-  
-  /* ----------------------------------------------------------- */
-  /*                       funcion finaliza compra               */
-  /* ----------------------------------------------------------- */
-  const checkout = () => {
-    const ok = confirm("¿Seguro que quiere finalizar la compra?")
-    if (ok){
-      alert("¡Compra realizada con éxito!")
-      clearCart()
-    }    
-  }
+  // Total estimado (opcional)
+  const total = () =>
+    Math.round(cart.reduce((acc, p) => acc + p.price, 0) * 100) / 100;
+
   const values = {
-    cart, 
-    addItem, 
-    clearCart, 
-    getTotalItems, 
+    cart,
+    addItem,
     deleteItem,
+    clearCart,
+    getTotalItems,
     total,
-    checkout
-  }
+  };
+
   return (
     <CartContext.Provider value={values}>
       {children}
     </CartContext.Provider>
-  )
-}
+  );
+};
