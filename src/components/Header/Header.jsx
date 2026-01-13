@@ -7,24 +7,23 @@ export const Header = () => {
     <header className="header">
       <div className="header-container">
         
-        {/* NAV A LA IZQUIERDA */}
-        <Nav />
-
-        {/* LOGO A LA DERECHA */}
         <Link to="/" className="header-brand">
-          <img
-            src="/logo-trastiesto.png"
-            alt="Trastiesto icono"
-            className="logo-icon"
-          />
-
+          {/* LOGO NOMBRE PRIMERO */}
           <img
             src="/logo-nombre.png"
             alt="Trastiesto"
             className="logo-nombre-header"
           />
+
+          {/* LOGO REDONDO A LA DERECHA */}
+          <img
+            src="/logo-trastiesto.png"
+            alt="Trastiesto icono"
+            className="logo-icon"
+          />
         </Link>
 
+        <Nav />
       </div>
     </header>
   );

@@ -20,22 +20,21 @@
 .header-brand {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
-  max-width: 85vw;
+  gap: clamp(0.4rem, 1vw, 0.8rem);
+  max-width: 100%;
 }
 
-/* ICONO */
+/* LOGO NOMBRE */
+.logo-nombre-header {
+  height: clamp(32px, 6vw, 64px);
+  width: auto;
+}
+
+/* LOGO ICONO */
 .logo-icon {
-  height: clamp(108px, 4vw, 46px);
+  height: clamp(28px, 5vw, 48px);
   width: auto;
   flex-shrink: 0;
-}
-
-/* LOGO NOMBRE (IMAGEN) */
-.logo-nombre-header {
-  height: clamp(106px, 6vw, 52px); /* 🔥 ahora sí se ve */
-  width: auto;
-  object-fit: contain;
 }
 
 
