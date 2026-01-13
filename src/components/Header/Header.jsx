@@ -6,11 +6,17 @@ export const Header = () => {
   return (
     <header className="header">
       <div className="header-container">
-        <Link to="/" className="logo" aria-label="Ir al inicio">
+        <Link to="/" className="header-brand">
           <img
             src="/logo-trastiesto.png"
+            alt="Trastiesto icono"
+            className="logo-icon"
+          />
+
+          <img
+            src="/logo-nombre.png"
             alt="Trastiesto"
-            className="logo-img"
+            className="logo-nombre-header"
           />
         </Link>
 

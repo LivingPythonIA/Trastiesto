@@ -11,8 +11,6 @@ import { MainLayouts } from './layouts/MainLayouts'
 import { AdminLayouts } from './layouts/AdminLayouts'
 import { RutaProtegida } from './components/RutaProtegida/RutaProtegida'
 import { Login } from './components/Login/Login'
-import { Menos7000 } from "./components/Menos7000/Menos7000";
-
 
 function App() {
   

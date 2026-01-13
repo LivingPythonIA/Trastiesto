@@ -1,97 +1,60 @@
 /* HEADER */
-.header,
-.header  {
+.header {
   background-color: #faf9f6;
   border-bottom: 1px solid #e2e2e2;
-  font-family: "Shrikhand", cursive !important;
 }
 
 /* CONTENEDOR */
 .header-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1.2rem 1rem;
+  padding: 0.8rem 1rem;
 
   display: flex;
-  flex-direction: column; /* 🔑 mobile-first */
   align-items: center;
-  gap: 1rem;
+  justify-content: space-between;
 }
 
-/* LOGO */
-.logo {
+/* BRAND */
+.header-brand {
   display: flex;
   align-items: center;
-  gap: 0.9rem;
-  text-decoration: none;
+  gap: 0.6rem;
+  max-width: 85vw;
 }
 
-.logo-img {
-  height: 100px; /* 🔑 logo grande */
+/* ICONO */
+.logo-icon {
+  height: clamp(108px, 4vw, 46px);
   width: auto;
+  flex-shrink: 0;
 }
 
-/* texto */
-.logo-text {
-  font-family: "Shrikhand", cursive;
-  font-size: 9.6rem; /* 🔥🔥 muy grande */
-  font-weight: 800;
-  color: #056027;
-  line-height: 2;
-  letter-spacing: 0.02em;
+/* LOGO NOMBRE (IMAGEN) */
+.logo-nombre-header {
+  height: clamp(106px, 6vw, 52px); /* 🔥 ahora sí se ve */
+  width: auto;
+  object-fit: contain;
 }
+
 
 /* NAV */
 nav ul {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 1.2rem;
   margin: 0;
   padding: 0;
 }
 
-nav a {
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: #2f2f2f;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-nav a:hover {
-  color: #7c8c6f;
-}
-
-/* CARRITO */
-.in-cart {
-  background-color: #7c8c6f;
-  color: white;
-  font-size: 0.65rem;
-  min-width: 18px;
-  height: 18px;
-  border-radius: 50%;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  position: absolute;
-  top: -5px;
-  right: -8px;
-}
-
-/* DESKTOP */
-@media (min-width: 768px) {
+/* MOBILE */
+@media (max-width: 768px) {
   .header-container {
-    flex-direction: row; /* logo izquierda, nav derecha */
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 0.6rem;
   }
 
-  .logo-text {
-    font-size: 1.6rem;
-  }
-
-  .logo-img {
-    height: 42px;
+  nav ul {
+    justify-content: center;
   }
 }

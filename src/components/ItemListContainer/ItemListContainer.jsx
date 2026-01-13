@@ -27,14 +27,23 @@ export const ItemListContainer = ({titulo}) => {
 
   return (
   <section>
+   {!category && (
+  <div className="home">
+    {/* <img
+      src="/nombre-trastiesto.png"
+      alt="Trastiesto"
+      className="logo-nombre"
+    /> */}
+
+    <p className="home-subtitle">
+      Un lugar para vender y encontrar cosas que todavía tienen mucho para dar.
+    </p>
+  </div>
+)}
+
     {!category ? (
-      // HOME
-      <div className="home">
-        <h1 className="home-title">Trastiesto</h1>
-        <p className="home-subtitle">
-          Un lugar para vender y encontrar cosas que todavía tienen mucho para dar.
-        </p>
-      </div>
+      // TODOS LOS PRODUCTOS
+      <h2>{titulo}</h2>
     ) : (
       // CATEGORÍAS
       <h2>
