@@ -8,11 +8,12 @@
 .header-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0.8rem 1rem;
+  padding: 1rem;
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; /* 🔑 izquierda / derecha */
+  gap: 1rem;
 }
 
 /* BRAND */
@@ -51,7 +52,7 @@ nav ul {
 @media (max-width: 768px) {
   .header-container {
     flex-direction: column;
-    gap: 0.6rem;
+    gap: 0.8rem;
   }
 
   nav ul {

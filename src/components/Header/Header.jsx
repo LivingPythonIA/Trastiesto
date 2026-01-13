@@ -6,6 +6,11 @@ export const Header = () => {
   return (
     <header className="header">
       <div className="header-container">
+        
+        {/* NAV A LA IZQUIERDA */}
+        <Nav />
+
+        {/* LOGO A LA DERECHA */}
         <Link to="/" className="header-brand">
           <img
             src="/logo-trastiesto.png"
@@ -20,7 +25,6 @@ export const Header = () => {
           />
         </Link>
 
-        <Nav />
       </div>
     </header>
   );
