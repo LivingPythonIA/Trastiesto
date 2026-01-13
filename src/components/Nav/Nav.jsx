@@ -19,6 +19,10 @@ export const Nav = () => {
         <li>
           <Link to="/category/Usado">Usado</Link>
         </li>
+        
+        <li>
+          <Link to="/menos-7000">Menos de $7000</Link>
+        </li>
 
         <li className="nav-cart">
           <Link to="/carrito" className="icons-cart">
