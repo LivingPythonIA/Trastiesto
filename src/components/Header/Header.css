@@ -26,17 +26,16 @@
 
 /* LOGO NOMBRE */
 .logo-nombre-header {
-  height: clamp(32px, 6vw, 64px);
+  height: clamp(122px, 6vw, 64px);
   width: auto;
 }
 
 /* LOGO ICONO */
 .logo-icon {
-  height: clamp(28px, 5vw, 48px);
+  height: clamp(108px, 5vw, 48px);
   width: auto;
   flex-shrink: 0;
 }
-
 
 /* NAV */
 nav ul {
